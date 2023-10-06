@@ -9,7 +9,7 @@ const Navbar = () => {
     </>
     return (
         <div>
-            <nav className="grid grid-cols-3 bg-[#111] m-1 rounded-md px-2 py-1">
+            <nav className="grid grid-cols-3 bg-[#111] m-1 rounded-md px-2 py-1 abosolute z-20 ">
                 <div></div>
                 <ul className="font-semibold flex justify-center gap-6">
                     {links}

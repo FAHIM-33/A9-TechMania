@@ -4,6 +4,9 @@
 @tailwind components;
 @tailwind utilities;
 body{
+    position: relative;
+    max-width: 1920px;
+    margin: 0 auto;
     font-family: 'Poppins', sans-serif;
     background-color: #070707;
     color: white;
@@ -15,7 +18,36 @@ body{
     color: bisque;
     transition:  0.5s;
 }
+.banner{
+    position: relative;
+    overflow: hidden;
 
+}
+.banner::before{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    background-image: url("/images/earth.jpg");
+    background-position-y: -100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    animation: loadBanner 8s forwards;
+}
+@keyframes loadBanner{
+    from{
+        scale: 1.2;
+    }
+    to{
+        scale: 1;
+    }
+}
+.marque img{
+    margin-right: 3rem;
+}
 .brr{
     border: 1px solid yellow;
 }
