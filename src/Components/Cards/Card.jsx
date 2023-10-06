@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 
 const Card = ({ data }) => {
     let { id, name, image, price, discription, date } = data;
-    console.log(image)
+
+
+
     return (
         <div className=" event-card overflow-hidden relative">
             <img className="w-full block" src={image} alt="" />
@@ -16,7 +18,9 @@ const Card = ({ data }) => {
                     <p className="text-3xl font-bold text-amber-400"><span className="text-4xl">$</span>{price}</p>
                     <p className="text-[#ffffff86] font-bold text-sm">{date}</p>
                 </div>
-                <button className="btn rounded-sm bg-gray-700 w-full text-xl font-medium text-white"><Link>Details</Link></button>
+                <Link to={`/details/${id}`}>
+                    <button className="btn rounded-sm bg-gray-700 w-full text-xl font-medium text-white">Details</button>
+                </Link>
             </div>
         </div>
     );
