@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "./MainLayout";
 import Home from "../Home";
+import PrivateRoute from "../../Auth/PrivateRoute";
 
 const routes = createBrowserRouter([
     {
@@ -13,8 +14,12 @@ const routes = createBrowserRouter([
                 element:<Home></Home>
             },
             {
-                path:'/d',
-                element:<div>Somewhere else...</div>
+                path:'/2',
+                element:<PrivateRoute><div>PRIVATE SECOND Page</div></PrivateRoute> 
+            },
+            {
+                path:'/3',
+                element:<PrivateRoute><div>Private 3RD Page</div></PrivateRoute>
             },
         ]
     }
