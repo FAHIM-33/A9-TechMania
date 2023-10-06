@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee";
 const Banner = () => {
     return (
         <section className="banner pt-24">
-            <h1 className="text-7xl font-semibold text-center w-3/4 mx-auto">Let&apos;s make the World better with  <span className="text-cyan-500 text-8xl">T</span>echnologies</h1>
+            <h1 className="text-7xl font-semibold text-center w-3/4 mx-auto">Let&apos;s make the World better with  <span className="text-cyan-500 text-8xl">T</span>echnologies_</h1>
             <div className="mt-36 marque">
                 <Marquee autoFill="true">
                     <img className="w-24" src="/logos/pngwing.com(1).png" alt="" />

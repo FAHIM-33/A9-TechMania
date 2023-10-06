@@ -1,0 +1,9 @@
+
+.event-card img{
+    transition: all 0.5s;
+    
+}
+.event-card:hover img{
+    scale: 1.2;
+    background-color: #000000af;
+}

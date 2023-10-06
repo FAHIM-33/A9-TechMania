@@ -48,6 +48,23 @@ body{
 .marque img{
     margin-right: 3rem;
 }
+.btn{
+    padding: 4px 8px;
+    transition: all 0.2s;
+
+}
+.btn:hover{
+    scale: 0.95;
+}
+
+
+
+
+.sldfk{
+    color: #00c09683;
+}
+
+
 .brr{
     border: 1px solid yellow;
 }
