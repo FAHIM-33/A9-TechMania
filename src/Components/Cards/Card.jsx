@@ -8,7 +8,7 @@ const Card = ({ data }) => {
 
 
     return (
-        <div className=" event-card overflow-hidden relative rounded-sm">
+        <div className=" event-card overflow-hidden relative rounded-sm" data-aos='zoom-in'>
             <img className="w-full block" src={image} alt="" />
             {/* bg-[#000000af] */}
             <div className="text-[#ffffffe0] absolute w-full bottom-0 right-0 bg-gradient-to-b from-[#ffffff1e] to-[#000000] backdrop-blur-sm p-4">
