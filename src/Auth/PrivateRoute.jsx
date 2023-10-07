@@ -1,15 +1,16 @@
 import { useContext } from "react";
 import { AuthContext } from "./AuthProvider";
-import { useNavigate } from "react-router-dom";
-
+import { Navigate } from "react-router-dom";
+import pt from 'prop-types'
 
 const PrivateRoute = ({ children }) => {
-    let {user} = useContext(AuthContext)
-    let navigate = useNavigate()
+    let {user, loading} = useContext(AuthContext)
+    if(loading){return <p className="text-5xl text-center mt-12">Loading...</p>}
+    if(!user){return <Navigate to="/login"></Navigate>}
 
-    if(!user){return navigate('/login')}
-    
     return children;
 };
-
+PrivateRoute.propTypes ={
+    children: pt.node,
+}
 export default PrivateRoute;

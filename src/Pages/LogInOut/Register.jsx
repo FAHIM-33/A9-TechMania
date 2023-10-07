@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const Register = () => {
-    let { createUser, update } = useContext(AuthContext)
+    let { createUser, update, googleLogin } = useContext(AuthContext)
 
     const handleLogin = (e) => {
         e.preventDefault()
@@ -22,13 +22,17 @@ const Register = () => {
         if (!patC.test(password)) { return toast.error("Password must have a capital leltter.") }
         if (!patS.test(password)) { return toast.error("Password must have a Special character.") }
         createUser(email, password)
-            .then(() => toast.success("Succesfully Registered!") && update(name).then(()=>toast("added Username")))
+            .then(() => toast.success("Succesfully Registered!") && update(name).then(() => toast("added Username")))
             .catch((error) => toast.error(error.code))
-        
+
 
     }
     const handleGoogleLogin = (e) => {
         e.preventDefault()
+        googleLogin()
+            .then(() => toast.success('Logged in with Google'))
+            .catch((error) => toast.error(error.code))
+
     }
     return (
         <div className="my-8">

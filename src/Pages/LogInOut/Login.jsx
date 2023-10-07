@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const Login = () => {
-    let { login } = useContext(AuthContext)
+    let { login, googleLogin } = useContext(AuthContext)
 
     const handleLogin = (e) => {
         e.preventDefault()
@@ -22,6 +22,9 @@ const Login = () => {
     }
     const handleGoogleLogin = (e) => {
         e.preventDefault()
+        googleLogin()
+        .then(()=>toast('something happening'))
+        .catch(()=>toast.error("shit happens"))
 
     }
     return (

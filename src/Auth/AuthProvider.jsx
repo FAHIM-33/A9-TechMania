@@ -1,33 +1,49 @@
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, updateProfile } from "firebase/auth";
+import {GoogleAuthProvider, signInWithPopup, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, updateProfile } from "firebase/auth";
+
 import auth from "../firebase.config";
 import pt from 'prop-types'
 import { createContext, useEffect, useState } from "react";
 export const AuthContext = createContext({})
-const AuthProvider = ({children}) => {
+
+
+
+const AuthProvider = ({ children }) => {
+    let goProvider = new GoogleAuthProvider();
     let [user, setUser] = useState(null)
-    const createUser = (email, password)=>{
+    let [loading, setLoading] = useState(true)
+    const createUser = (email, password) => {
+        setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
     }
-    const login = (email, password)=>{
+    const login = (email, password) => {
+        setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
-    const logOut =()=>{
+    const logOut = () => {
         return signOut(auth)
     }
-    const update =(name)=>{
-        return updateProfile(auth.currentUser,{
+    const googleLogin = () => {
+        return signInWithPopup(auth,goProvider)
+    }
+
+
+
+    const update = (name) => {
+        setLoading(true)
+        return updateProfile(auth.currentUser, {
             displayName: name,
         })
     }
 
 
 
-    useEffect(()=>{
-        let unSubscribe = onAuthStateChanged(auth, (person)=>{
-            setUser(person)  
+    useEffect(() => {
+        let unSubscribe = onAuthStateChanged(auth, (person) => {
+            setUser(person)
+            setLoading(false)
         })
-        return ()=>unSubscribe();
-    },[])
+        return () => unSubscribe();
+    }, [])
 
 
 
@@ -37,6 +53,8 @@ const AuthProvider = ({children}) => {
         user,
         logOut,
         update,
+        loading,
+        googleLogin,
 
     }
 
@@ -44,11 +62,11 @@ const AuthProvider = ({children}) => {
         <AuthContext.Provider value={data}>
             {children}
         </AuthContext.Provider>
-        );
+    );
 
 };
 AuthProvider.propTypes = {
-    children:pt.node,
+    children: pt.node,
 }
 
 export default AuthProvider;
