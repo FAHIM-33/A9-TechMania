@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Card from "./Card";
 
 
-const Cardsss = () => {
+const EventService = () => {
     let [data, setData] = useState([])
 
     useEffect(() => {
@@ -13,8 +13,12 @@ const Cardsss = () => {
 
 
     return (
-        <section>
-            <h2 className="text-5xl font-semibold text-center mt-12 mb-8">Our Services</h2>
+        <section className="p-4 mt-24">
+            <div className="flex items-center justify-center ">
+                <h2 className="whitespace-nowrap pl-4  w-fit text-5xl font-semibold  mb-8 rounded-md py-4">_<span className="text-cyan-400">E</span>vent <span className="text-amber-400">S</span>ervices</h2>
+                <div className="bg-[#ffffff3a]  w-full h-[2px]"></div>
+            </div>
+
             <div className="grid grid-cols-3 gap-4">
                 {
                     data.map(obj => <Card
@@ -27,4 +31,4 @@ const Cardsss = () => {
     );
 };
 
-export default Cardsss;
+export default EventService;

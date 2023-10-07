@@ -1,11 +1,15 @@
-import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../Auth/AuthProvider";
 
 
 const Navbar = () => {
+    let { user, logOut } = useContext(AuthContext)
+    console.log(user, typeof(logOut))
     let links = <>
-        <li><NavLink to="/" className="p-2 rounded-md block">HOME</NavLink></li>
-        <li><NavLink to="/2" className="p-2 rounded-md block">TWO</NavLink></li>
-        <li><NavLink to="/3" className="p-2 rounded-md block">Three</NavLink></li>
+        <li><NavLink to="/" className="p-2  block">HOME</NavLink></li>
+        <li><NavLink to="/2" className="p-2  block">TWO</NavLink></li>
+        <li><NavLink to="/3" className="p-2  block">Three</NavLink></li>
     </>
     return (
         <div>
@@ -18,7 +22,18 @@ const Navbar = () => {
                 <ul className="font-semibold flex justify-center gap-6">
                     {links}
                 </ul>
-                <div className=" "></div>
+                {
+                    user ? <div className="flex justify-end gap-4 items-center">
+                        <p>{user?.displayName}</p>
+                        <figure><img className="p-4 bg-red-700 rounded-full" src="" alt="" /></figure>
+                       <button onClick={()=>logOut()} className="btn bg-[#222] rounded-md font-medium text-lg">Log Out</button>
+                    </div>
+                        :
+                        <div className="flex justify-end gap-4 items-center">
+                            <Link to="/login"><button className="btn bg-[#222] rounded-md font-medium text-lg">Login</button></Link>
+                        </div>
+                }
+
 
             </nav>
         </div>

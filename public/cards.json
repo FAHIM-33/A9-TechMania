@@ -1,16 +1,5 @@
 [
     {
-        "id": 1,
-        "name": "Electronics Expo 2023",
-        "image": "/images/ckt.jpg",
-        "price": "25",
-        "discription": "Explore the latest in tech innovations at Tech Expo 2023! Discover cutting-edge gadgets, network with industry leaders, and attend insightful workshops.",
-        "location": "Convention Center, Cityville",
-        "date": "2023-11-15",
-        "theme": "color",
-        "text": "color"
-    },
-    {
         "id": 2,
         "name": "Drone Showcase",
         "image": "/images/drone.jpg",
@@ -40,6 +29,17 @@
         "discription": "Experience the future of virtual reality firsthand! Dive into immersive worlds and witness the next level of VR technology at this cutting-edge event.",
         "location": "VR Center, Digitropolis",
         "date": "2023-11-22",
+        "theme": "color",
+        "text": "color"
+    },
+    {
+        "id": 1,
+        "name": "Electronics Expo 2023",
+        "image": "/images/ckt.jpg",
+        "price": "25",
+        "discription": "Explore the latest in tech innovations at Tech Expo 2023! Discover cutting-edge gadgets, network with industry leaders, and attend insightful workshops.",
+        "location": "Convention Center, Cityville",
+        "date": "2023-11-15",
         "theme": "color",
         "text": "color"
     },

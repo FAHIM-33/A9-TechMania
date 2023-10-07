@@ -1,0 +1,7 @@
+input:hover{
+    border: 1px solid #e9d63183;
+}
+input:focus{
+    border: 1px solid cyan;
+    outline: none;
+}

@@ -1,12 +1,12 @@
 import Banner from "../Components/Banner";
-import Cardsss from "../Components/Cards/Cardsss";
+import EventService from "../Components/Cards/EventService";
 
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <Cardsss></Cardsss>
+            <EventService></EventService>
         </div>
     );
 };

@@ -13,11 +13,21 @@ body{
 }
 
 .active{
-    border-bottom: 1px solid cyan;
-    border-top: 1px solid cyan;
-    color: bisque;
-    transition:  0.5s;
+    /* border-bottom: 1px solid cyan;
+    border-top: 1px solid cyan; */
+    border-radius: 4px;
+    color: #f0c400;
+    background-color: #222;
 }
+nav li{
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+nav li:hover{
+    color: #f3d75b;
+    background-color: #22222259;
+}
+
 .banner{
     position: relative;
     overflow: hidden;
@@ -49,12 +59,14 @@ body{
     margin-right: 3rem;
 }
 .btn{
-    padding: 4px 8px;
-    transition: all 0.2s;
-
+    padding: 6px 8px;
+    transition: all 0.25s;
+    
 }
 .btn:hover{
-    scale: 0.95;
+    scale: 1.05;
+    color: #f3d75b;
+    background-color: #31313183;
 }
 
 
