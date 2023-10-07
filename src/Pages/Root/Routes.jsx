@@ -6,12 +6,13 @@ import Details from "../Details";
 import axios from "axios";
 import Login from "../LogInOut/Login";
 import Register from "../LogInOut/Register";
+import Error from "../ErrorPage.jsx/Error";
 
 const routes = createBrowserRouter([
     {
         path: '/',
         element: <MainLayout></MainLayout>,
-        errorElement: <div>This is error Page</div>,
+        errorElement: <Error></Error>,
         children: [
             {
                 path: '/',

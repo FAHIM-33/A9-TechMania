@@ -15,6 +15,8 @@ const Register = () => {
         let email = e.target.email.value
         let password = e.target.password.value
         let name = e.target.name.value
+        let url = e.target.url.value
+
         let patC = /[A-Z]/
         let patS = /[!@#$%^&*_/+=:;,.~'"]/;
 
@@ -22,7 +24,12 @@ const Register = () => {
         if (!patC.test(password)) { return toast.error("Password must have a capital leltter.") }
         if (!patS.test(password)) { return toast.error("Password must have a Special character.") }
         createUser(email, password)
-            .then(() => toast.success("Succesfully Registered!") && update(name).then(() => toast("added Username")))
+            .then(() => {
+                toast.success("Succesfully Registered!")
+                update(name,url).then()
+                    .catch(() => toast.error("Error setting Username"))
+
+            })
             .catch((error) => toast.error(error.code))
 
 

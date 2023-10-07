@@ -5,7 +5,6 @@ import { AuthContext } from "../Auth/AuthProvider";
 
 const Navbar = () => {
     let { user, logOut } = useContext(AuthContext)
-    console.log(user, typeof (logOut))
     let links = <>
         <li><NavLink to="/" className="p-2  block">HOME</NavLink></li>
         <li><NavLink to="/2" className="p-2  block">TWO</NavLink></li>
@@ -37,6 +36,8 @@ const Navbar = () => {
                         :
                         <div className="flex justify-end gap-4 items-center">
                             <Link to="/login"><button className="btn bg-[#222] rounded-md font-medium text-lg">Login</button></Link>
+                            <span>or</span>
+                            <Link to="/register"><button className="btn bg-[#222] rounded-md font-medium text-lg">Register</button></Link>
                         </div>
                 }
 

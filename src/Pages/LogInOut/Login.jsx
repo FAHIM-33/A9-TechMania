@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import './form.css'
 import { FcGoogle } from 'react-icons/fc';
 import { AuthContext } from '../../Auth/AuthProvider';
@@ -23,8 +23,8 @@ const Login = () => {
     const handleGoogleLogin = (e) => {
         e.preventDefault()
         googleLogin()
-        .then(()=>toast('something happening'))
-        .catch(()=>toast.error("shit happens"))
+        .then(()=>toast.success('Logged In user'))
+        .catch((error)=>toast.error(error.code))
 
     }
     return (

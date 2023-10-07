@@ -37,7 +37,7 @@ nav li:hover{
     content: '';
     position: absolute;
     z-index: -1;
-    background-image: url("/images/earth.jpg");
+    background-image: url("https://i.ibb.co/ftccZm8/earth.jpg");
     background-position-y: -100px;
     background-size: cover;
     background-repeat: no-repeat;

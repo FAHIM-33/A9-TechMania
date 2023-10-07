@@ -2,7 +2,7 @@
     {
         "id": 2,
         "name": "Drone Showcase",
-        "image": "/images/drone.jpg",
+        "image": "https://i.ibb.co/2K3qKdF/drone.jpg",
         "price": "20",
         "discription": "Get hands-on with the coolest gadgets of the year! Experience the future today with state-of-the-art devices and revolutionary technologies.",
         "location": "Tech Plaza, Innovation City",
@@ -13,7 +13,7 @@
     {
         "id": 3,
         "name": "FutureTech Summit",
-        "image": "/images/gadget.jpg",
+        "image": "https://i.ibb.co/5xRg7RL/pc.jpg",
         "price": "30",
         "discription": "Discover what's on the horizon in the world of technology. Join us for a glimpse into the future of innovation and groundbreaking solutions.",
         "location": "Innovation Hub, Techville",
@@ -24,7 +24,7 @@
     {
         "id": 4,
         "name": "VR World Conference",
-        "image": "/images/vr.jpg",
+        "image": "https://i.ibb.co/Z6PdXK3/vr.jpg",
         "price": "40",
         "discription": "Experience the future of virtual reality firsthand! Dive into immersive worlds and witness the next level of VR technology at this cutting-edge event.",
         "location": "VR Center, Digitropolis",
@@ -35,7 +35,7 @@
     {
         "id": 1,
         "name": "Electronics Expo 2023",
-        "image": "/images/ckt.jpg",
+        "image": "https://i.ibb.co/vLQZC3r/ckt.jpg",
         "price": "25",
         "discription": "Explore the latest in tech innovations at Tech Expo 2023! Discover cutting-edge gadgets, network with industry leaders, and attend insightful workshops.",
         "location": "Convention Center, Cityville",
@@ -46,7 +46,7 @@
     {
         "id": 6,
         "name": "Gadgets Symposium",
-        "image": "/images/headphone.jpg",
+        "image": "https://i.ibb.co/rvbtzvK/headphone.jpg",
         "price": "25",
         "discription": "Dive into the world of advanced robotics and automation. Gain insights from experts and witness cutting-edge demonstrations in the field of robotics.",
         "location": "Robotics Center, Mechropolis",
@@ -57,7 +57,7 @@
     {
         "id": 5,
         "name": "Computer Expo",
-        "image": "/images/ryzen.jpg",
+        "image": "https://i.ibb.co/7NfJDXW/ryzen.jpg",
         "price": "15",
         "discription": "Transform your living space with the latest smart home tech. Explore innovative solutions that make your home smarter, safer, and more efficient.",
         "location": "Home Innovations Hall, Smartville",
