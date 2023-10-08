@@ -3,7 +3,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body{
+
+body {
     position: relative;
     max-width: 1920px;
     margin: 0 auto;
@@ -12,28 +13,29 @@ body{
     color: white;
 }
 
-.active{
-    /* border-bottom: 1px solid cyan;
-    border-top: 1px solid cyan; */
+.active {
     border-radius: 4px;
     color: #f0c400;
     background-color: #222;
 }
-nav li{
+
+nav li {
     border-radius: 4px;
     transition: all 0.2s;
 }
-nav li:hover{
+
+nav li:hover {
     color: #f3d75b;
     background-color: #22222259;
 }
 
-.banner{
+.banner {
     position: relative;
     overflow: hidden;
 
 }
-.banner::before{
+
+.banner::before {
     content: '';
     position: absolute;
     z-index: -1;
@@ -47,39 +49,52 @@ nav li:hover{
     right: 0;
     animation: loadBanner 8s forwards;
 }
-@keyframes loadBanner{
-    from{
+
+@keyframes loadBanner {
+    from {
         scale: 1.2;
     }
-    to{
+
+    to {
         scale: 1;
     }
 }
-.marque img{
+
+.marque img {
     margin-right: 3rem;
 }
-.btn{
+
+.btn {
     padding: 6px 8px;
     transition: all 0.25s;
-    
+
 }
-.btn:hover{
+
+.btn:hover {
     scale: 1.05;
     color: #f3d75b;
     background-color: #31313183;
 }
-
-
-
-
-.sldfk{
-    color: #00c09683;
+#details-page{
+    background-size: 80% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 
-.brr{
+.brr {
     border: 1px solid yellow;
 }
-.brb{
+
+.brb {
     border: 1px solid cyan;
+}
+
+@media screen and (max-width:767px) {
+    .banner::before {
+        background-position-y: 0;
+    }
+    #details-page{
+        background-size: 100% 100%;
+    }
 }

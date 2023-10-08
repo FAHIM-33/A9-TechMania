@@ -1,15 +1,11 @@
 import pt from 'prop-types'
 const MemberCard = ({ data }) => {
 
-    let arr = data.features
+    let arr = data.features 
     return (
-        <div className='flex flex-col p-4 rounded-md bg-[#111]'>
-            <h1 className='text-4xl font-light text-cyan-500'>{data.title}</h1>
-            {/* <h2 className='flex items-center gap-1'>
-                <p className="block whitespace-nowrap text-4xl font-light text-cyan-400" >{data.title}</p>
-                <div className='h-[1px] w-full bg-cyan-400'></div>
-            </h2> */}
-            <p className='mt-4 text-lg'>Features:</p>
+        <div className='flex flex-col p-4 rounded-md bg-[#222]'>
+            <h1 className='md:text-4xl text-3xl font-light text-cyan-500'>{data.title}</h1>
+            <p className='mt-4 md:text-lg'>Features:</p>
             <ul className='pl-[1px] ml-4 border-l border-amber-400 my-4 text-gray-400 text-sm'>
                 {
                     arr.map((str, i) => <li className='' key={i}>{str}</li>)
@@ -17,8 +13,8 @@ const MemberCard = ({ data }) => {
             </ul>
             <div className=' flex-grow'></div>
             <div className='flex justify-between items-center'>
-                <p className='text-4xl text-end text-amber-400'>{data.price}</p>
-                <button className='btn text-lg rounded-md bg-cyan-500 text-black font-medium'>Purchase</button>
+                <p className='md:text-4xl text-3xl text-end text-amber-400'>{data.price}</p>
+                <button className='btn md:text-lg rounded-md bg-cyan-500 text-black font-medium'>Purchase</button>
             </div>
         </div>
     );

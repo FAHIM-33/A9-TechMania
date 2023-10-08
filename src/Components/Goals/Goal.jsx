@@ -2,9 +2,9 @@ import pt from 'prop-types'
 
 const Goal = ({data}) => {
     return (
-        <div className='p-4 mt-8  rounded-md bg-gradient-to-r from-[#000] to-[#222]' data-aos="fade-right">
-            <h1 className='text-center text-2xl '>{data.title}</h1>
-            <p className='font-light text-center p-8'>{data.details}</p>
+        <div className='lg:p-4 p-2 lg:mt-8 mt-4 rounded-md bg-gradient-to-r from-[#000] to-[#222]' data-aos="fade-right">
+            <h1 className='text-center md:text-2xl text-lg '>{data.title}</h1>
+            <p className='font-light text-center text-sm p-8'>{data.details}</p>
         </div>
     );
 };

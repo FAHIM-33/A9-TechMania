@@ -3,11 +3,11 @@ import './comm.css'
 const Comm = ({data}) => {
 
     return (
-        <div id='comm' data-aos="fade-right" className='flex gap-3 items-center justify-center p-4 rounded-md px-8 bg-[#111]'>
+        <div id='comm' data-aos="fade-right" className='flex gap-3 items-center justify-center md:p-4 p-2 rounded-md md:px-8 px-4 bg-[#111]'>
             <figure className=''>
                 <img src={data.img} alt="" className='w-36 '/>
             </figure>
-            <p>{data.comment}</p>
+            <p className='lg:text-base text-sm'>{data.comment}</p>
         </div>
     );
 };

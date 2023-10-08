@@ -6,18 +6,17 @@ const Footer = () => {
     return (
         <footer className="bg-[#111] pt-4 pb-4">
             <div className="text-center" data-aos="zoom-in">
-                <p className="font-semibold text-sm">
-                    <span className="text-cyan-400 text-xl">T</span>ech<span className="text-amber-400 text-xl">M</span>ania
+                <p className="font-semibold md:text-sm text-xs">
+                    <span className="text-cyan-400 md:text-xl text-base">T</span>ech<span className="text-amber-400 md:text-xl text-base">M</span>ania
                 </p>
             </div>
             <div className="flex justify-center items-center mt-4 text-sm">
                 <MdOutlineLocationOn className="text-amber-400"/>
-                <p className="text-gray-300">Visit us at : </p>
-                <p className="font-light ">Gulshan Road, block E,Techmania Tower,263/6, Dhaka 1220</p>
-
+                <p className="text-gray-300 md:text-base text-xs">Visit us at : </p> 
             </div>
-            <p className="text-center mt-4 mb-3">Social</p>
-            <div className="flex justify-center gap-4 text-xl text-amber-400">
+                <p className="text-center font-light md:text-base text-xs">Gulshan Road, block E,Techmania Tower,263/6, Dhaka 1220</p>
+            <p className="text-center mt-4 mb-3 md:text-base text-sm">Social</p>
+            <div className="flex justify-center gap-4 md:text-xl text-sm text-amber-400">
                 <BsFacebook />
                 <BsInstagram />
                 <BsTwitter />

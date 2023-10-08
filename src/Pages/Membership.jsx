@@ -6,7 +6,7 @@ import Footer from "../Components/Footer";
 
 
 const Membership = () => {
-    let [data, setData] = useState([])
+    let [data, setData] = useState([]) 
 
     useEffect(() => {
         axios.get("/membership.json")
@@ -18,8 +18,8 @@ const Membership = () => {
             <div className='bg-[#111] m-1 rounded-md'>
                 <Navbar></Navbar>
             </div>
-            <h2 className="text-4xl text-center mb-12 mt-20 pr-4">Purchase our premium membership or get started for free</h2>
-            <section className="grid grid-cols-3 gap-8 p-4 mb-20">
+            <h2 className="lg:text-4xl md:text-3xl text-xl text-center md:mb-12 mb-4 md:mt-20 mt-6 lg:pr-4 p-2 md:p-0">Purchase our premium membership or get started for free</h2>
+            <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 p-4 md:mb-20 mb-8">
                 {
                     data.map(obj => <MemberCard
                         key={obj.id}
