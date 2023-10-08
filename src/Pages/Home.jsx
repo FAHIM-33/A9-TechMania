@@ -2,6 +2,7 @@ import Banner from "../Components/Banner";
 import EventService from "../Components/Cards/EventService";
 import Comments from "../Components/Comments/Comments";
 import Footer from "../Components/Footer";
+import Goalsss from "../Components/Goals/Goalsss";
 
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
             <Banner></Banner>
             <EventService></EventService>
             <Comments></Comments>
+            <Goalsss></Goalsss>
             <Footer></Footer>
         </div>
     );
