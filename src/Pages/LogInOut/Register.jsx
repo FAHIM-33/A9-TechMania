@@ -5,6 +5,8 @@ import { AuthContext } from '../../Auth/AuthProvider';
 import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Navbar from '../../Components/Navbar';
+import Logo from '../../Components/Logo';
 
 
 const Register = () => {
@@ -26,7 +28,7 @@ const Register = () => {
         createUser(email, password)
             .then(() => {
                 toast.success("Succesfully Registered!")
-                update(name,url).then()
+                update(name, url).then()
                     .catch((error) => toast.error(error.code))
 
             })
@@ -42,14 +44,12 @@ const Register = () => {
 
     }
     return (
-        <div className="my-8">
+        <div className="mb-12">
+            <div className='bg-[#111] m-1 rounded-md'>
+                <Navbar></Navbar>
+            </div>
+            <Logo></Logo>
 
-            <h1 className='mb-12'>
-                <p className="font-light text-4xl text-center">
-                    <span className="text-cyan-400 text-5xl">T</span>ech<span className="text-amber-400 text-5xl">M</span>ania &#8482;
-                </p>
-
-            </h1>
             <form onSubmit={handleLogin} className="w-2/5 mx-auto p-4 text-gray-300 border border-[#222] rounded-md">
                 <div className='flex items-center gap-1'>
                     <span className="block whitespace-nowrap text-5xl font-light" >Register Now </span>

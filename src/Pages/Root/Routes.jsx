@@ -29,7 +29,7 @@ const routes = createBrowserRouter([
                 element: <PrivateRoute><Membership></Membership></PrivateRoute>
             },
             {
-                path: '/contact',
+                path: '/about',
                 element: <PrivateRoute><Contact></Contact></PrivateRoute>
             },
             {

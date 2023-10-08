@@ -8,11 +8,11 @@ const Navbar = () => {
     let links = <>
         <li><NavLink to="/" className="p-2  block">HOME</NavLink></li>
         <li><NavLink to="/membership" className="p-2  block">Membership</NavLink></li>
-        <li><NavLink to="/contact" className="p-2  block">Contact us</NavLink></li>
+        <li><NavLink to="/About" className="p-2  block">About us</NavLink></li>
     </>
     return (
         <div>
-            <nav className="grid items-center grid-cols-3 m-1 px-2 py-1 abosolute z-20 ">
+            <nav className="grid items-center grid-cols-3 px-2 py-1 abosolute z-20">
                 <div>
                     <p className="font-semibold">
                         <span className="text-cyan-400 text-2xl">T</span>ech<span className="text-amber-400 text-2xl">M</span>ania
