@@ -2,14 +2,13 @@ import { useContext } from 'react';
 import './form.css'
 import { FcGoogle } from 'react-icons/fc';
 import { AuthContext } from '../../Auth/AuthProvider';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
 const Login = () => {
     let { login, googleLogin } = useContext(AuthContext)
-    let navigate = useNavigate();
 
     const handleLogin = (e) => {
         e.preventDefault()

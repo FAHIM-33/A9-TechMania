@@ -11,17 +11,6 @@
         "text": "color"
     },
     {
-        "id": 3,
-        "name": "FutureTech Summit",
-        "image": "https://i.ibb.co/5xRg7RL/pc.jpg",
-        "price": "30",
-        "discription": "Discover what's on the horizon in the world of technology. Join us for a glimpse into the future of innovation and groundbreaking solutions.",
-        "location": "Innovation Hub, Techville",
-        "date": "2023-12-05",
-        "theme": "color",
-        "text": "color"
-    },
-    {
         "id": 4,
         "name": "VR World Conference",
         "image": "https://i.ibb.co/Z6PdXK3/vr.jpg",
@@ -29,6 +18,17 @@
         "discription": "Experience the future of virtual reality firsthand! Dive into immersive worlds and witness the next level of VR technology at this cutting-edge event.",
         "location": "VR Center, Digitropolis",
         "date": "2023-11-22",
+        "theme": "color",
+        "text": "color"
+    },
+    {
+        "id": 5,
+        "name": "Computer Expo",
+        "image": "https://i.ibb.co/7NfJDXW/ryzen.jpg",
+        "price": "15",
+        "discription": "Transform your living space with the latest smart home tech. Explore innovative solutions that make your home smarter, safer, and more efficient.",
+        "location": "Home Innovations Hall, Smartville",
+        "date": "2023-10-20",
         "theme": "color",
         "text": "color"
     },
@@ -55,13 +55,13 @@
         "text": "color"
     },
     {
-        "id": 5,
-        "name": "Computer Expo",
-        "image": "https://i.ibb.co/7NfJDXW/ryzen.jpg",
-        "price": "15",
-        "discription": "Transform your living space with the latest smart home tech. Explore innovative solutions that make your home smarter, safer, and more efficient.",
-        "location": "Home Innovations Hall, Smartville",
-        "date": "2023-10-20",
+        "id": 3,
+        "name": "FutureTech Summit",
+        "image": "https://i.ibb.co/5xRg7RL/pc.jpg",
+        "price": "30",
+        "discription": "Discover what's on the horizon in the world of technology. Join us for a glimpse into the future of innovation and groundbreaking solutions.",
+        "location": "Innovation Hub, Techville",
+        "date": "2023-12-05",
         "theme": "color",
         "text": "color"
     }

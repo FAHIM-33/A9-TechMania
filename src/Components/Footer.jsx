@@ -1,8 +1,6 @@
 import { BsGithub, BsFacebook, BsLinkedin, BsInstagram, BsTwitter } from "react-icons/bs";
 import { MdOutlineLocationOn } from "react-icons/md";
-// import AOS from 'aos';
-// import 'aos/dist/aos.css'; 
-// AOS.init();
+
 
 const Footer = () => {
     return (
