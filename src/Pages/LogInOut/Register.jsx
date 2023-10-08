@@ -27,7 +27,7 @@ const Register = () => {
             .then(() => {
                 toast.success("Succesfully Registered!")
                 update(name,url).then()
-                    .catch(() => toast.error("Error setting Username"))
+                    .catch((error) => toast.error(error.code))
 
             })
             .catch((error) => toast.error(error.code))
@@ -65,6 +65,15 @@ const Register = () => {
                 </div>
 
                 <div className='mt-8'>
+                    <label htmlFor="url"
+                        className=''
+                    >Enter Image URL:</label>
+                    <br />
+                    <input type="text" name="url" id="url" placeholder="Image URL_" required
+                        className="p-4 rounded-md bg-transparent border border-[#222] w-full" />
+                </div>
+
+                <div className='mt-8'>
                     <label htmlFor="email"
                         className=''
                     >Enter Your Email Address:</label>
@@ -86,7 +95,7 @@ const Register = () => {
                     <div className='text-amber-400 text-lg my-2'>or</div>
                     <div className='w-full h-[1px] bg-gray-400'></div>
                 </div>
-                <div className=''>Register with:</div>
+                {/* <div className=''>Register with:</div> */}
                 <button onClick={handleGoogleLogin} className='btn bg-[#222] text-xl w-full rounded-md flex justify-center items-center'><span className='text-3xl'><FcGoogle></FcGoogle></span>oogle</button>
             </form>
             <p className='text-center'>Already have an account? <Link to="/login" className='text-blue-600'>Login Here</Link></p>

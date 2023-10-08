@@ -24,7 +24,11 @@ const routes = createBrowserRouter([
                 loader: (params) =>  axios.get('/cards.json')
             },
             {
-                path: '/3',
+                path: '/membership',
+                element: <PrivateRoute><div>Private 3RD Page</div></PrivateRoute>
+            },
+            {
+                path: '/contact',
                 element: <PrivateRoute><div>Private 3RD Page</div></PrivateRoute>
             },
             {

@@ -1,0 +1,7 @@
+#comm{
+    transition: all 0.2s;
+}
+#comm:hover{
+    scale: 1.03;
+    background-color: #1f1f11;
+}

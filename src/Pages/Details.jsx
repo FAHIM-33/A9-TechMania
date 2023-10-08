@@ -1,4 +1,5 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import Footer from "../Components/Footer";
 
 
 const Details = () => {
@@ -28,6 +29,7 @@ const Details = () => {
                     </div>
                 </div>
             </div>
+            <Footer></Footer>
         </div >
     );
 };

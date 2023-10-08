@@ -7,8 +7,8 @@ const Navbar = () => {
     let { user, logOut } = useContext(AuthContext)
     let links = <>
         <li><NavLink to="/" className="p-2  block">HOME</NavLink></li>
-        <li><NavLink to="/2" className="p-2  block">TWO</NavLink></li>
-        <li><NavLink to="/3" className="p-2  block">Three</NavLink></li>
+        <li><NavLink to="/membership" className="p-2  block">Membership</NavLink></li>
+        <li><NavLink to="/contact" className="p-2  block">Contact us</NavLink></li>
     </>
     return (
         <div>

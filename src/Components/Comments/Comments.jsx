@@ -19,7 +19,7 @@ const Comments = () => {
                 <div className="bg-[#ffffff3a]  w-full h-[2px]"></div>
             </div>
             <h2 className="text-center text-3xl text-gray-300 underline">Leading tech companies comment about us</h2>
-            <div className="grid grid-cols-2 gap-4 py-8 px-12 ">
+            <div className="grid grid-cols-2 gap-4 py-8 px-12">
                 {
                     comm.map(obj => <Comm
                         key={obj.id}
