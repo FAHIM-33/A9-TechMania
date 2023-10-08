@@ -5,6 +5,7 @@ import { AuthContext } from '../../Auth/AuthProvider';
 import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Navbar from '../../Components/Navbar';
 
 
 const Login = () => {
@@ -30,8 +31,10 @@ const Login = () => {
 
     }
     return (
-        <div className="my-8 ">
-
+        <div className="">  
+            <div className='bg-[#111] m-1 rounded-md'>
+                <Navbar></Navbar>
+            </div>
             <h1 className='mb-12'>
                 <p className="font-light text-4xl text-center">
                     <span className="text-cyan-400 text-5xl">T</span>ech<span className="text-amber-400 text-5xl">M</span>ania &#8482;

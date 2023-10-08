@@ -1,0 +1,39 @@
+[
+    {
+        "id": 3,
+        "title": "Free Member",
+        "price": "Free",
+        "features": [
+            "Tailored sponsorship opportunities for brand visibility.",
+            "Dedicated event liaison for seamless coordination and logistics.",
+            "Customized branding and promotional activities at events.",
+            "Exclusive access to closed-door executive roundtables.",
+            "Priority participation in tech showcases and product launches."
+        ]
+    },
+    {
+        "id": 1,
+        "title": "Tech Enthusiast",
+        "price": "$99/year",
+        "features": [
+            "Access to all our tech events throughout the year.",
+            "Exclusive early-bird registration for upcoming events.",
+            "Priority seating and networking opportunities with industry leaders.",
+            "Complimentary access to select workshops and seminars.",
+            "Quarterly tech trend reports delivered to your inbox."
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Industry Insider",
+        "price": "$299/year",
+        "features": [
+            "VIP access to all events, including invitation-only sessions.",
+            "Reserved front-row seating at key presentations and panel discussions.",
+            "Personalized matchmaking for potential collaborations and partnerships.",
+            "Full access to premium workshops and masterclasses.",
+            "Bi-monthly industry insights and analysis reports."
+        ]
+    }
+
+]

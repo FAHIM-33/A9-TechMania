@@ -1,10 +1,12 @@
 import Marquee from "react-fast-marquee";
+import Navbar from "./Navbar";
 
 
 const Banner = () => {
     return (
-        <section className="banner pt-24"> 
-            <h1 className="text-7xl font-semibold text-center w-3/4 mx-auto">Let&apos;s make the <span className="text-amber-400">W</span>orld better with  <span className="text-cyan-500 text-8xl">T</span>echnologies_</h1>
+        <section className="banner"> 
+        <Navbar></Navbar>
+            <h1 className="pt-32 text-7xl font-semibold text-center w-3/4 mx-auto">Let&apos;s make the <span className="text-amber-400">W</span>orld better with  <span className="text-cyan-500 text-8xl">T</span>echnologies_</h1>
             <div className="mt-36 marque">
                 <Marquee autoFill="true">
                     <img className="w-24" src="https://i.ibb.co/KsNgSWy/pngwing-com-1.png" alt="" />

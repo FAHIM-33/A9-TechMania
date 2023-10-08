@@ -7,7 +7,8 @@ import axios from "axios";
 import Login from "../LogInOut/Login";
 import Register from "../LogInOut/Register";
 import Error from "../ErrorPage.jsx/Error";
-
+import Membership from "../Membership";
+import Contact from "../Contact"
 const routes = createBrowserRouter([
     {
         path: '/',
@@ -25,11 +26,11 @@ const routes = createBrowserRouter([
             },
             {
                 path: '/membership',
-                element: <PrivateRoute><div>Private 3RD Page</div></PrivateRoute>
+                element: <PrivateRoute><Membership></Membership></PrivateRoute>
             },
             {
                 path: '/contact',
-                element: <PrivateRoute><div>Private 3RD Page</div></PrivateRoute>
+                element: <PrivateRoute><Contact></Contact></PrivateRoute>
             },
             {
                 path: '/login',

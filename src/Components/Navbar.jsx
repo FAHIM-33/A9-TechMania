@@ -12,7 +12,7 @@ const Navbar = () => {
     </>
     return (
         <div>
-            <nav className="grid items-center grid-cols-3 bg-[#111] m-1 rounded-md px-2 py-1 abosolute z-20 ">
+            <nav className="grid items-center grid-cols-3 m-1 px-2 py-1 abosolute z-20 ">
                 <div>
                     <p className="font-semibold">
                         <span className="text-cyan-400 text-2xl">T</span>ech<span className="text-amber-400 text-2xl">M</span>ania
