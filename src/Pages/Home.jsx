@@ -5,6 +5,7 @@ import Footer from "../Components/Footer";
 import Goalsss from "../Components/Goals/Goalsss";
 
 
+
 const Home = () => {
     return (
         <div>
@@ -13,6 +14,7 @@ const Home = () => {
             <Comments></Comments>
             <Goalsss></Goalsss>
             <Footer></Footer>
+            
         </div>
     );
 };

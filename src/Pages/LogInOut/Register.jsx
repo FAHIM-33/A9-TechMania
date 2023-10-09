@@ -2,16 +2,15 @@ import { useContext } from 'react';
 import './form.css'
 import { FcGoogle } from 'react-icons/fc';
 import { AuthContext } from '../../Auth/AuthProvider';
-import { Link } from 'react-router-dom';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { Link, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import Navbar from '../../Components/Navbar';
 import Logo from '../../Components/Logo';
 
 
 const Register = () => {
     let { createUser, update, googleLogin } = useContext(AuthContext)
-
+    let nav = useNavigate()
     const handleLogin = (e) => {
         e.preventDefault()
         let email = e.target.email.value
@@ -28,7 +27,7 @@ const Register = () => {
         createUser(email, password)
             .then(() => {
                 toast.success("Succesfully Registered!")
-                update(name, url).then()
+                update(name, url).then(()=> nav('/'))
                     .catch((error) => toast.error(error.code))
 
             })
@@ -39,7 +38,10 @@ const Register = () => {
     const handleGoogleLogin = (e) => {
         e.preventDefault()
         googleLogin()
-            .then(() => toast.success('Logged in with Google'))
+            .then(() => {
+                toast.success('Logged in with Google')
+                nav('/')
+            })
             .catch((error) => toast.error(error.code))
 
     }
@@ -48,7 +50,7 @@ const Register = () => {
             <div className='bg-[#111] m-1 rounded-md'>
                 <Navbar></Navbar>
             </div>
-            <Logo></Logo> 
+            <Logo></Logo>
 
             <form onSubmit={handleLogin} className="lg:w-2/5 md:4/5 m-4 md:mx-auto p-4 text-gray-300 border border-[#222] rounded-md">
                 <div className='flex items-center gap-1'>
@@ -95,18 +97,11 @@ const Register = () => {
                     <div className='text-amber-400 text-lg my-2'>or</div>
                     <div className='w-full h-[1px] bg-gray-400'></div>
                 </div>
-                
+
                 <button onClick={handleGoogleLogin} className='btn bg-[#222] text-xl w-full rounded-md flex justify-center items-center'><span className='text-2xl md:text-3xl'><FcGoogle></FcGoogle></span>oogle</button>
             </form>
             <p className='text-center'>Already have an account? <Link to="/login" className='text-blue-600'>Login Here</Link></p>
 
-            <ToastContainer
-                theme="dark"
-                closeOnClick
-                newestOnTop={false}
-                autoClose={3000}
-                position="top-center"
-            />
         </div>
     );
 };

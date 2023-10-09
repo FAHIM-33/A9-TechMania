@@ -5,7 +5,7 @@ import pt from 'prop-types'
 
 const PrivateRoute = ({ children }) => {
     let {user, loading} = useContext(AuthContext)
-    if(loading){return <p className="text-5xl text-center mt-12">Loading...</p>}
+    if(loading){return <p className="text-5xl text-center mt-12 animate-pulse">Loading<span className="animate-ping">_</span></p>}
     if(!user){return <Navigate to="/login"></Navigate>}
 
     return children;

@@ -2,22 +2,24 @@ import { useContext } from 'react';
 import './form.css'
 import { FcGoogle } from 'react-icons/fc';
 import { AuthContext } from '../../Auth/AuthProvider';
-import { Link } from 'react-router-dom';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { Link, useNavigate } from 'react-router-dom';
+
 import Navbar from '../../Components/Navbar';
 import Logo from '../../Components/Logo';
+import { toast } from 'react-toastify';
 
 
 const Login = () => {
     let { login, googleLogin } = useContext(AuthContext)
-
+    let nav = useNavigate()
     const handleLogin = (e) => {
         e.preventDefault()
         let email = e.target.email.value
         let password = e.target.password.value
         login(email, password)
             .then(() => {
+                // window.location.reload();
+                nav('/')
                 toast.success('Logged in succesfully')
             })
             .catch((error) => toast.error(error.code))
@@ -26,6 +28,8 @@ const Login = () => {
         e.preventDefault()
         googleLogin()
             .then(() => {
+                // window.location.reload();
+                nav('/')
                 toast.success('Logged In user')
             })
             .catch((error) => toast.error(error.code))
@@ -69,13 +73,7 @@ const Login = () => {
                 <button onClick={handleGoogleLogin} className='btn bg-[#222] text-xl w-full rounded-md flex justify-center items-center'><span className='text-2xl md:text-3xl'><FcGoogle></FcGoogle></span>oogle</button>
             </form>
             <p className='text-center'>Don&apos;t have and account? <Link to="/register" className='text-blue-600'>Register Now.</Link></p>
-            <ToastContainer
-                theme="dark"
-                closeOnClick
-                newestOnTop={false}
-                autoClose={3000}
-                position="top-center"
-            />
+
         </div>
     );
 };

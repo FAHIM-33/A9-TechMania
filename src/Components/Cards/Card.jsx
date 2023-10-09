@@ -21,7 +21,7 @@ const Card = ({ data }) => {
                     <p className="text-[#ffffff86] font-bold text-sm">{date}</p>
                 </div>
                 <Link to={`/details/${id}`}>
-                    <button className="btn rounded-sm bg-[#22222259] w-full md:text-xl text-base font-medium text-white">Details</button>
+                    <button className="border border-[#333] btn rounded-sm bg-[#22222259] w-full md:text-xl text-base font-medium text-white">Details</button>
                 </Link>
             </div>
         </div>
