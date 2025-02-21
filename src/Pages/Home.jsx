@@ -10,11 +10,13 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <EventService></EventService>
-            <Comments></Comments>
-            <Goalsss></Goalsss>
+            <div className="max-w-screen-2xl mx-auto">
+                <EventService></EventService>
+                <Comments></Comments>
+                <Goalsss></Goalsss>
+            </div>
             <Footer></Footer>
-            
+
         </div>
     );
 };

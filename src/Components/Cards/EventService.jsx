@@ -4,7 +4,7 @@ import Card from "./Card";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 AOS.init();
-
+ 
 const EventService = () => {
     let [data, setData] = useState([])
 
